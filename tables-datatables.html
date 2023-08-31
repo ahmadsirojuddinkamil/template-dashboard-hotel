@@ -1,17 +1,16 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-	<title>Hotel Dashboard Template</title>
+	<title>Hotel - Data Tables</title>
 	<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
 	<link rel="stylesheet" href="assets/css/feathericon.min.css">
-	<link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
-	<link rel="stylesheet" href="assets/plugins/morris/morris.css">
+	<link rel="stylesheet" href="assets/plugins/datatables/datatables.min.css">
 	<link rel="stylesheet" href="assets/css/style.css"> </head>
 
 <body>
@@ -33,8 +32,8 @@
 								<li class="notification-message">
 									<a href="#">
 										<div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
-											</span>
+                                            <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-02.jpg">
+                                            </span>
 											<div class="media-body">
 												<p class="noti-details"><span class="noti-title">Carlson Tech</span> has approved <span class="noti-title">your estimate</span></p>
 												<p class="noti-time"><span class="notification-time">4 mins ago</span> </p>
@@ -45,11 +44,11 @@
 								<li class="notification-message">
 									<a href="#">
 										<div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
-											</span>
+                                            <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-11.jpg">
+                                            </span>
 											<div class="media-body">
 												<p class="noti-details"><span class="noti-title">International Software
-													Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
+                                                    Inc</span> has sent you a invoice in the amount of <span class="noti-title">$218</span></p>
 												<p class="noti-time"><span class="notification-time">6 mins ago</span> </p>
 											</div>
 										</div>
@@ -58,11 +57,11 @@
 								<li class="notification-message">
 									<a href="#">
 										<div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
-											</span>
+                                            <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-17.jpg">
+                                            </span>
 											<div class="media-body">
 												<p class="noti-details"><span class="noti-title">John Hendry</span> sent a cancellation request <span class="noti-title">Apple iPhone
-													XR</span></p>
+                                                    XR</span></p>
 												<p class="noti-time"><span class="notification-time">8 mins ago</span> </p>
 											</div>
 										</div>
@@ -71,12 +70,12 @@
 								<li class="notification-message">
 									<a href="#">
 										<div class="media"> <span class="avatar avatar-sm">
-											<img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
-											</span>
+                                            <img class="avatar-img rounded-circle" alt="User Image" src="assets/img/profiles/avatar-13.jpg">
+                                            </span>
 											<div class="media-body">
 												<p class="noti-details"><span class="noti-title">Mercury Software
-												Inc</span> added a new product <span class="noti-title">Apple
-												MacBook Pro</span></p>
+                                                    Inc</span> added a new product <span class="noti-title">Apple
+                                                    MacBook Pro</span></p>
 												<p class="noti-time"><span class="notification-time">12 mins ago</span> </p>
 											</div>
 										</div>
@@ -99,18 +98,12 @@
 						</div> <a class="dropdown-item" href="profile.html">My Profile</a> <a class="dropdown-item" href="settings.html">Account Settings</a> <a class="dropdown-item" href="login.html">Logout</a> </div>
 				</li>
 			</ul>
-			<div class="top-nav-search">
-				<form>
-					<input type="text" class="form-control" placeholder="Search here">
-					<button class="btn" type="submit"><i class="fas fa-search"></i></button>
-				</form>
-			</div>
 		</div>
 		<div class="sidebar" id="sidebar">
 			<div class="sidebar-inner slimscroll">
 				<div id="sidebar-menu" class="sidebar-menu">
 					<ul>
-						<li class="active"> <a href="index.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+						<li> <a href="index.html"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
 						<li class="list-divider"></li>
 						<li class="submenu"> <a href="#"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
@@ -221,7 +214,7 @@
 						<li class="submenu"> <a href="#"><i class="fas fa-table"></i> <span> Tables </span> <span class="menu-arrow"></span></a>
 							<ul class="submenu_class" style="display: none;">
 								<li><a href="tables-basic.html">Basic Table </a></li>
-								<li><a href="tables-datatables.html">Data Table </a></li>
+								<li><a class="active" href="tables-datatables.html">Data Table </a></li>
 							</ul>
 						</li>
 						<li class="list-divider"></li>
@@ -252,191 +245,268 @@
 		</div>
 		<div class="page-wrapper">
 			<div class="content container-fluid">
-				<div class="page-header">
+				<div class="page-header mt-5">
 					<div class="row">
-						<div class="col-sm-12 mt-5">
-							<h3 class="page-title mt-3">Good Morning Soeng Souy!</h3>
-							<ul class="breadcrumb">
-								<li class="breadcrumb-item active">Dashboard</li>
-							</ul>
-						</div>
+						<div class="col">
+							<h3 class="page-title">Data Tables</h3> </div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xl-3 col-sm-6 col-12">
-						<div class="card board1 fill">
-							<div class="card-body">
-								<div class="dash-widget-header">
-									<div>
-										<h3 class="card_widget_header">236</h3>
-										<h6 class="text-muted">Total Booking</h6> </div>
-									<div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-user-plus">
-									<path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-									<circle cx="8.5" cy="7" r="4"></circle>
-									<line x1="20" y1="8" x2="20" y2="14"></line>
-									<line x1="23" y1="11" x2="17" y2="11"></line>
-									</svg></span> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-sm-6 col-12">
-						<div class="card board1 fill">
-							<div class="card-body">
-								<div class="dash-widget-header">
-									<div>
-										<h3 class="card_widget_header">180</h3>
-										<h6 class="text-muted">Available Rooms</h6> </div>
-									<div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-dollar-sign">
-									<line x1="12" y1="1" x2="12" y2="23"></line>
-									<path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-									</svg></span> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-sm-6 col-12">
-						<div class="card board1 fill">
-							<div class="card-body">
-								<div class="dash-widget-header">
-									<div>
-										<h3 class="card_widget_header">1538</h3>
-										<h6 class="text-muted">Enquiry</h6> </div>
-									<div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-plus">
-									<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z">
-									</path>
-									<polyline points="14 2 14 8 20 8"></polyline>
-									<line x1="12" y1="18" x2="12" y2="12"></line>
-									<line x1="9" y1="15" x2="15" y2="15"></line>
-									</svg></span> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-xl-3 col-sm-6 col-12">
-						<div class="card board1 fill">
-							<div class="card-body">
-								<div class="dash-widget-header">
-									<div>
-										<h3 class="card_widget_header">364</h3>
-										<h6 class="text-muted">Collections</h6> </div>
-									<div class="ml-auto mt-md-3 mt-lg-0"> <span class="opacity-7 text-muted"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" fill="none" stroke="#009688" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe">
-									<circle cx="12" cy="12" r="10"></circle>
-									<line x1="2" y1="12" x2="22" y2="12"></line>
-									<path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-									</path>
-									</svg></span> </div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 col-lg-6">
-						<div class="card card-chart">
-							<div class="card-header">
-								<h4 class="card-title">VISITORS</h4> </div>
-							<div class="card-body">
-								<div id="line-chart"></div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-12 col-lg-6">
-						<div class="card card-chart">
-							<div class="card-header">
-								<h4 class="card-title">ROOMS BOOKED</h4> </div>
-							<div class="card-body">
-								<div id="donut-chart"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-12 d-flex">
-						<div class="card card-table flex-fill">
-							<div class="card-header">
-								<h4 class="card-title float-left mt-2">Booking</h4>
-								<button type="button" class="btn btn-primary float-right veiwbutton">Veiw All</button>
-							</div>
+					<div class="col-sm-12">
+						<div class="card">
 							<div class="card-body">
 								<div class="table-responsive">
-									<table class="table table-hover table-center">
+									<table class="datatable table table-stripped">
 										<thead>
 											<tr>
-												<th>Booking ID</th>
 												<th>Name</th>
-												<th>Email ID</th>
-												<th>Aadhar Number</th>
-												<th class="text-center">Room Type</th>
-												<th class="text-right">Number</th>
-												<th class="text-center">Status</th>
+												<th>Position</th>
+												<th>Office</th>
+												<th>Age</th>
+												<th>Start date</th>
+												<th>Salary</th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="text-nowrap">
-													<div>BKG-0001</div>
-												</td>
-												<td class="text-nowrap">Tommy Bernal</td>
-												<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="3743585a5a4e55524559565b77524f565a475b521954585a">[email&#160;protected]</a></td>
-												<td>12414786454545</td>
-												<td class="text-center">Double</td>
-												<td class="text-right">
-													<div>631-254-6480</div>
-												</td>
-												<td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
+												<td>Tiger Nixon</td>
+												<td>System Architect</td>
+												<td>Edinburgh</td>
+												<td>61</td>
+												<td>2011/04/25</td>
+												<td>$320,800</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<div>BKG-0002</div>
-												</td>
-												<td class="text-nowrap">Ellen Thill</td>
-												<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="89fbe0eae1e8fbedebfbe6ebfafdc9ecf1e8e4f9e5eca7eae6e4">[email&#160;protected]</a></td>
-												<td>5456223232322</td>
-												<td class="text-center">Double</td>
-												<td class="text-right">
-													<div>830-468-1042</div>
-												</td>
-												<td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
+												<td>Garrett Winters</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>63</td>
+												<td>2011/07/25</td>
+												<td>$170,750</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<div>BKG-0003</div>
-												</td>
-												<td class="text-nowrap">Corina Kelsey</td>
-												<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="76131a1a1318021e1f1a1a36130e171b061a135815191b">[email&#160;protected]</a></td>
-												<td>454543232625</td>
-												<td class="text-center">Single</td>
-												<td class="text-right">
-													<div>508-335-5531</div>
-												</td>
-												<td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
+												<td>Ashton Cox</td>
+												<td>Junior Technical Author</td>
+												<td>San Francisco</td>
+												<td>66</td>
+												<td>2009/01/12</td>
+												<td>$86,000</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<div>BKG-0004</div>
-												</td>
-												<td class="text-nowrap">Carolyn Lane</td>
-												<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="50333f22393e313b353c23352910373d31393c7e333f3d">[email&#160;protected]</a></td>
-												<td>2368989562621</td>
-												<td class="text-center">Double</td>
-												<td class="text-right">
-													<div>262-260-1170</div>
-												</td>
-												<td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
+												<td>Cedric Kelly</td>
+												<td>Senior Javascript Developer</td>
+												<td>Edinburgh</td>
+												<td>22</td>
+												<td>2012/03/29</td>
+												<td>$433,060</td>
 											</tr>
 											<tr>
-												<td class="text-nowrap">
-													<div>BKG-0005</div>
-												</td>
-												<td class="text-nowrap">Denise</td>
-												<td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1c7f7d6e73706572707d72795c7b717d7570327f7371">[email&#160;protected]</a></td>
-												<td>3245455582287</td>
-												<td class="text-center">Single</td>
-												<td class="text-right">
-													<div>570-458-0070</div>
-												</td>
-												<td class="text-center"> <span class="badge badge-pill bg-success inv-badge">INACTIVE</span> </td>
+												<td>Airi Satou</td>
+												<td>Accountant</td>
+												<td>Tokyo</td>
+												<td>33</td>
+												<td>2008/11/28</td>
+												<td>$162,700</td>
+											</tr>
+											<tr>
+												<td>Brielle Williamson</td>
+												<td>Integration Specialist</td>
+												<td>New York</td>
+												<td>61</td>
+												<td>2012/12/02</td>
+												<td>$372,000</td>
+											</tr>
+											<tr>
+												<td>Herrod Chandler</td>
+												<td>Sales Assistant</td>
+												<td>San Francisco</td>
+												<td>59</td>
+												<td>2012/08/06</td>
+												<td>$137,500</td>
+											</tr>
+											<tr>
+												<td>Rhona Davidson</td>
+												<td>Integration Specialist</td>
+												<td>Tokyo</td>
+												<td>55</td>
+												<td>2010/10/14</td>
+												<td>$327,900</td>
+											</tr>
+											<tr>
+												<td>Colleen Hurst</td>
+												<td>Javascript Developer</td>
+												<td>San Francisco</td>
+												<td>39</td>
+												<td>2009/09/15</td>
+												<td>$205,500</td>
+											</tr>
+											<tr>
+												<td>Sonya Frost</td>
+												<td>Software Engineer</td>
+												<td>Edinburgh</td>
+												<td>23</td>
+												<td>2008/12/13</td>
+												<td>$103,600</td>
+											</tr>
+											<tr>
+												<td>Jena Gaines</td>
+												<td>Office Manager</td>
+												<td>London</td>
+												<td>30</td>
+												<td>2008/12/19</td>
+												<td>$90,560</td>
+											</tr>
+											<tr>
+												<td>Quinn Flynn</td>
+												<td>Support Lead</td>
+												<td>Edinburgh</td>
+												<td>22</td>
+												<td>2013/03/03</td>
+												<td>$342,000</td>
+											</tr>
+											<tr>
+												<td>Charde Marshall</td>
+												<td>Regional Director</td>
+												<td>San Francisco</td>
+												<td>36</td>
+												<td>2008/10/16</td>
+												<td>$470,600</td>
+											</tr>
+											<tr>
+												<td>Haley Kennedy</td>
+												<td>Senior Marketing Designer</td>
+												<td>London</td>
+												<td>43</td>
+												<td>2012/12/18</td>
+												<td>$313,500</td>
+											</tr>
+											<tr>
+												<td>Tatyana Fitzpatrick</td>
+												<td>Regional Director</td>
+												<td>London</td>
+												<td>19</td>
+												<td>2010/03/17</td>
+												<td>$385,750</td>
+											</tr>
+											<tr>
+												<td>Michael Silva</td>
+												<td>Marketing Designer</td>
+												<td>London</td>
+												<td>66</td>
+												<td>2012/11/27</td>
+												<td>$198,500</td>
+											</tr>
+											<tr>
+												<td>Paul Byrd</td>
+												<td>Chief Financial Officer (CFO)</td>
+												<td>New York</td>
+												<td>64</td>
+												<td>2010/06/09</td>
+												<td>$725,000</td>
+											</tr>
+											<tr>
+												<td>Gloria Little</td>
+												<td>Systems Administrator</td>
+												<td>New York</td>
+												<td>59</td>
+												<td>2009/04/10</td>
+												<td>$237,500</td>
+											</tr>
+											<tr>
+												<td>Bradley Greer</td>
+												<td>Software Engineer</td>
+												<td>London</td>
+												<td>41</td>
+												<td>2012/10/13</td>
+												<td>$132,000</td>
+											</tr>
+											<tr>
+												<td>Dai Rios</td>
+												<td>Personnel Lead</td>
+												<td>Edinburgh</td>
+												<td>35</td>
+												<td>2012/09/26</td>
+												<td>$217,500</td>
+											</tr>
+											<tr>
+												<td>Jenette Caldwell</td>
+												<td>Development Lead</td>
+												<td>New York</td>
+												<td>30</td>
+												<td>2011/09/03</td>
+												<td>$345,000</td>
+											</tr>
+											<tr>
+												<td>Yuri Berry</td>
+												<td>Chief Marketing Officer (CMO)</td>
+												<td>New York</td>
+												<td>40</td>
+												<td>2009/06/25</td>
+												<td>$675,000</td>
+											</tr>
+											<tr>
+												<td>Caesar Vance</td>
+												<td>Pre-Sales Support</td>
+												<td>New York</td>
+												<td>21</td>
+												<td>2011/12/12</td>
+												<td>$106,450</td>
+											</tr>
+											<tr>
+												<td>Doris Wilder</td>
+												<td>Sales Assistant</td>
+												<td>Sidney</td>
+												<td>23</td>
+												<td>2010/09/20</td>
+												<td>$85,600</td>
+											</tr>
+											<tr>
+												<td>Angelica Ramos</td>
+												<td>Chief Executive Officer (CEO)</td>
+												<td>London</td>
+												<td>47</td>
+												<td>2009/10/09</td>
+												<td>$1,200,000</td>
+											</tr>
+											<tr>
+												<td>Gavin Joyce</td>
+												<td>Developer</td>
+												<td>Edinburgh</td>
+												<td>42</td>
+												<td>2010/12/22</td>
+												<td>$92,575</td>
+											</tr>
+											<tr>
+												<td>Jennifer Chang</td>
+												<td>Regional Director</td>
+												<td>Singapore</td>
+												<td>28</td>
+												<td>2010/11/14</td>
+												<td>$357,650</td>
+											</tr>
+											<tr>
+												<td>Brenden Wagner</td>
+												<td>Software Engineer</td>
+												<td>San Francisco</td>
+												<td>28</td>
+												<td>2011/06/07</td>
+												<td>$206,850</td>
+											</tr>
+											<tr>
+												<td>Fiona Green</td>
+												<td>Chief Operating Officer (COO)</td>
+												<td>San Francisco</td>
+												<td>48</td>
+												<td>2010/03/11</td>
+												<td>$850,000</td>
+											</tr>
+											<tr>
+												<td>Shou Itou</td>
+												<td>Regional Marketing</td>
+												<td>Tokyo</td>
+												<td>20</td>
+												<td>2011/08/14</td>
+												<td>$163,000</td>
 											</tr>
 										</tbody>
 									</table>
@@ -448,14 +518,12 @@
 			</div>
 		</div>
 	</div>
-	<script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
 	<script src="assets/js/jquery-3.5.1.min.js"></script>
 	<script src="assets/js/popper.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="assets/plugins/raphael/raphael.min.js"></script>
-	<script src="assets/plugins/morris/morris.min.js"></script>
-	<script src="assets/js/chart.morris.js"></script>
+	<script src="assets/plugins/datatables/jquery.dataTables.min.js"></script>
+	<script src="assets/plugins/datatables/datatables.min.js"></script>
 	<script src="assets/js/script.js"></script>
 </body>
 
